@@ -4,7 +4,7 @@ import logging
 
 def prep_obs(ds_obs, oi_grid, oi_param, simu_start_date, coarsening):
     
-    logging.info('     Reading observations...')
+    logging.info('     Preparing observations...')
     
     def preprocess(ds):
         return ds.coarsen(coarsening, boundary="trim").mean()
