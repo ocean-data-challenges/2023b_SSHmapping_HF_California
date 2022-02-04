@@ -6,7 +6,7 @@ This repository contains codes and sample notebooks of a data challenge for down
 ![Data Sequence](figures/DC-illustration_CaliXover.png)
 
 The quickstart demo_oi can be run online by clicking here:
-[![Colab](figures/logo_colab.png=30x20)](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
+[![Colab](figures/logo_colab.png=30x)](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
 
 
 ## Motivation
