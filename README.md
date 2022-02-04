@@ -39,7 +39,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 **λt**: minimum time scale resolved. 
  
 ## Quick start
-You can follow the quickstart guide in [this notebook](https://github.com/ocean-data-challenges/2020a_SSH_mapping_NATL60/blob/master/quickstart.ipynb) or launch it directly from <a href="https://binder.pangeo.io/v2/gh/ocean-data-challenges/2020a_SSH_mapping_NATL60/master?filepath=quickstart.ipynb" target="_blank">CoLab</a>.
+You can follow the quickstart guide in [this notebook](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/quickstart_demo_oi.ipynb) or launch it directly from <a href="https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing" target="_blank">CoLab</a>.
 
 ## Download the data
 The data are hosted on TBD .
