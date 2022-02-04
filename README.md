@@ -1,12 +1,12 @@
  
 # High frequency dynamic mapping Data Challenge 2022a
 
-This repository contains codes and sample notebooks for downloading and processing the SSH mapping data challenge.
+This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT data in the Californian SWOT X-over.
 
 ![Data Sequence](figures/DC-illustration_CaliXover.png)
 
 The quickstart demo_oi can be run online by clicking here:
-[![Colab](figures/logo_colab.png)](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
+[![Colab](figures/logo_colab.png=30x20)](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
 
 
 ## Motivation
