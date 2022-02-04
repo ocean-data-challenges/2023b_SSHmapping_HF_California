@@ -36,3 +36,30 @@ def prep_obs(ds_obs, oi_grid, oi_param, simu_start_date, coarsening):
     return ds_obs
 
 
+
+def save_maps(ds_maps,path,dc_ref=None):
+    
+    logging.info('     Saving reconstruction maps...')
+    
+    try :
+        ds_maps['lon']
+        ds_maps['lat']
+        ds_maps['time']
+        ds_maps['ssh']
+    except KeyError:
+        print('Warning: For evaluation, the reconstructed maps must contain the coordinates: lon, lat and time and the variable: ssh(time, lat, lon).')
+         
+    if ds_maps.lon.size != dc_ref.lon.size or ds_maps.lat.size != dc_ref.lat.size or ds_maps.time.size != dc_ref.time.size : 
+        print('Warning: For evaluation, the reconstructed maps do not have the same size as the reference maps.')
+    elif numpy.any(ds_maps.lon.values != dc_ref.lon.values) or numpy.any(ds_maps.lat.values != dc_ref.lat.values) or numpy.any(ds_maps.time.values != dc_ref.time.values) :  
+        print('Warning: For evaluation, the reconstructed maps have the same size as the reference maps but not the same lon, lat or time values.')
+         
+    
+    dsout = xr.Dataset({'ssh':(('time','lat','lon'),ds_maps.ssh.values) 
+                       },
+                       coords={'time':('time',ds_maps.time.values),'lon':('lon',ds_maps.lon.values),'lat':('lat',ds_maps.lat.values)}
+                      )
+    dsout.to_netcdf(path)
+    
+    
+    return 

@@ -3,7 +3,10 @@
 
 This repository contains codes and sample notebooks for downloading and processing the SSH mapping data challenge.
 
+![Data Sequence](figures/DC-illustration_CaliXover.png)
+
 The quickstart demo_oi can be run online by clicking here:
+[![Colab](figures/logo_colab.png)](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
 
 
 ## Motivation
