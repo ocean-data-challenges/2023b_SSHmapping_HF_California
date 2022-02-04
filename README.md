@@ -14,15 +14,15 @@ The quickstart demo_oi can be run online on Google Colab by clicking here:
 The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
 
 ### Reference simulation
-The reference simulation is the MITgcm simulation. The simulation is run with tidal forcing. 
+The reference simulation is the MITgcm simulation. The simulation is run with tidal forcing. The SSH maps are available hourly.  
 
 ### Observations
-The SSH observations are SWOT altimeter data. This nadir altimeters constellation was operating during the 2003-2005 period and is still considered as a historical optimal constellation in terms of spatio-temporal coverage. The data challenge simulates the addition of SWOT to this reference constellation. No observation error is considered in this challenge.
+The SSH observations are SWOT altimeter data without observation errors, with KaRIn errors only and with all observation errors. 
 
 ### Data sequence and use
  
-The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-30: 42 days.
-For reconstruction methods that need a spin-up, the **observations** can be used from 2012-10-01 until the beginning of the evaluation period (21 days). This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the **reference data** can be used from 2013-01-02 to 2013-09-30. The reference data between 2012-12-02 and 2013-01-02 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.
+The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-30: 89 days.
+For reconstruction methods that need a spin-up, the **observations** can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the **reference data** and the **observations** can be used from 2012-06-01 to 2012-10-29. The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.
 
 ![Data Sequence](figures/DC-data_availability.png)
 
