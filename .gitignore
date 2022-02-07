@@ -3,4 +3,8 @@
 /data
 /GD-NR-DC2022a
 /GD-SWOT-DC2022a
+/dask-worker-space 
+notebooks/dask-worker-space
+notebooks/GD-NR-DC2022a
+notebooks/GD-SWOT-DC2022a
 __MACOSX/
