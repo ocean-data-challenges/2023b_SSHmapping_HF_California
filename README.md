@@ -9,6 +9,11 @@ The quickstart demo_oi can be run online on Google Colab by clicking here:
 [<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
 
 
+The quickstart perform_your_eval can be run online on Google Colab by clicking here:
+[<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
+You only need to compress your reconstruction maps in a zip file, drop it in your google drive account, create a link to access it and copy paste the link id in the quickstart in place of XXXXX.
+
+
 ## Motivation
 
 The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
