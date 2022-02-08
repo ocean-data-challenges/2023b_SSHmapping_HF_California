@@ -30,7 +30,7 @@ Three mapping experiments can be performed using SWOT:
 - with KaRIn errors only: **SWOT KaRIn noise** ('ssh_karin_rand_corr' variable),
 - with all observation errors: **SWOT all noise** ('ssh_karin_corr' variable).
 
-see notebooks/demo_perform_oi.ipynb for clarifications. 
+see the [`demo_perform_evaluation`](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_evaluation.ipynb) notebook for clarification. 
 
 ### Data sequence and use
  
