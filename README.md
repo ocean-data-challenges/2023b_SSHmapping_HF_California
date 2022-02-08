@@ -26,9 +26,9 @@ The reference simulation is the MITgcm simulation. The simulation is run with ti
 The SSH observations are SWOT altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
 
 Three mapping experiments can be performed using SWOT: 
-- without observation errors ('ssh_karin_true_corr' variable), 
-- with KaRIn errors only ('ssh_karin_rand_corr' variable),
-- with all observation errors ('ssh_karin_corr' variable).
+- without observation errors: **SWOT no noise** ('ssh_karin_true_corr' variable), 
+- with KaRIn errors only: **SWOT KaRIn noise** ('ssh_karin_rand_corr' variable),
+- with all observation errors: **SWOT all noise** ('ssh_karin_corr' variable).
 
 see notebooks/demo_perform_oi.ipynb for clarifications. 
 
