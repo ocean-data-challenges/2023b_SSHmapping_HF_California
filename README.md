@@ -10,7 +10,8 @@ The quickstart demo_oi can be run online on Google Colab by clicking here:
 
 
 The quickstart perform_your_eval can be run online on Google Colab by clicking here:
-[<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1dHei0-NYoER6Ma0MOFEO1I3VYYhnJtbD?usp=sharing)
+[<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1dHei0-NYoER6Ma0MOFEO1I3VYYhnJtbD?usp=sharing). 
+
 You only need to compress your reconstruction maps in a zip file, drop it in your google drive account, create a link to access it and copy paste the link id in the quickstart in place of XXXXX.
 
 
