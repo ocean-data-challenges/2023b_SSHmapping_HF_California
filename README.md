@@ -20,7 +20,7 @@ You only need to compress your reconstruction maps in a zip file, drop it in you
 The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
 
 ### Reference simulation
-The reference simulation is the MITgcm simulation. The simulation is run with tidal forcing. The SSH maps are available hourly. The barotropic tide has been removed from the reference run.  
+The reference simulation is the MITgcm LLC4320 simulation. The simulation is run with tidal forcing. The SSH maps are available hourly. The barotropic tide has been removed from the reference run.  
 
 ### Observations
 The SSH observations are SWOT altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
