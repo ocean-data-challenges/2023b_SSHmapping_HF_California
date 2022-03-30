@@ -61,7 +61,9 @@ You can follow the quickstart guide in [this notebook](https://github.com/SammyM
 The data are hosted on TBD .
 
 They are presented with the following directory structure:
-
+- ssh_obs/: SWOT data, observations from SWOTsimulator on MITgcm reference;
+- ssh_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
+- ssh_mod: training/validation data, SSH MITgcm outside of the evaluation period.
 
 ## Demo for baseline and evaluation
 
