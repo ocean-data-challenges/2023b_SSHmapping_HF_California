@@ -59,11 +59,55 @@ You can follow the quickstart guide in [this notebook](https://github.com/SammyM
 
 ## Download the data
 The data are hosted on TBD .
+ The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/ocean-data-challenges/dc_calXover_data/catalog.html). They are presented with the following directory structure:
 
-They are presented with the following directory structure:
-- ssh_obs/: SWOT data, observations from SWOTsimulator on MITgcm reference;
-- ssh_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
-- ssh_mod: training/validation data, SSH MITgcm outside of the evaluation period.
+- dc_obs/: SWOT data, observations from SWOTsimulator on MITgcm reference;
+
+```
+.
+|-- dc_obs
+|   |-- 2022a_SSH_mapping_CalXover_swot.nc
+
+```
+
+- dc_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
+
+```
+|-- dc_ref_eval
+|   |-- 2022a_SSH_mapping_CalXover_eval_****-**-**.nc
+
+where ****-**-** stands for year, month and day. 
+```
+
+- dc_mod: training/validation data, SSH MITgcm outside of the evaluation period.
+
+```
+|-- dc_mod
+|   |-- 2022a_SSH_mapping_CalXover_model_****-**-**.nc
+
+where ****-**-** stands for year, month and day. 
+
+```
+
+To start out download the *observation* dataset (dc_obs, 77M) from the temporary data server, use:
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs.tar.gz
+```
+
+the *reference* dataset for the evaluation (dc_ref_eval, 660M) using (*this step may take several minutes*):
+
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_ref_eval.tar.gz
+```
+
+the *model* dataset for training/validation (dc_ref_eval, 1.5G) using (*this step may take several minutes*):
+
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_mod.tar.gz
+```
+
+and then uncompress the files using `tar -xvf <file>.tar.gz`. You may also use `ftp`, `rsync` or `curl`to donwload the data.
+
 
 ## Demo for baseline and evaluation
 
