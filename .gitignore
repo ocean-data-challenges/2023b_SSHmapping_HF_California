@@ -1,4 +1,7 @@
 # ignoring results directory
+.DS_Store
+.ipynb_checkpoints
+dask-worker-space
 /results/
 /data
 /GD-NR-DC2022a
