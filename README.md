@@ -4,8 +4,8 @@
 This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT data in the Californian SWOT X-over.
 
 <p float="left">
-  <img src="figures/DC-illustration_CaliXover.png" width="100" />
-  <img src="figures/DC_illust_swot_calXover.png" width="100" /> 
+  <img src="figures/DC-illustration_CaliXover.png" width="500" />
+  <img src="figures/DC_illust_swot_calXover.png" width="500" /> 
 </p>
 
 The quickstart demo_oi can be run online on Google Colab by clicking here:
