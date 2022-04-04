@@ -14,9 +14,7 @@ holoviews
 bokeh
 dask
 netCDF4
-cartopy
-hvplot
-pyinterp
+hvplot==0.7.3
 xrft
 tabulate
 

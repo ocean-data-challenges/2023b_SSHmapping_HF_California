@@ -17,4 +17,3 @@ netCDF4
 hvplot==0.7.3
 xrft
 tabulate
-pyinterp==0.13.0
