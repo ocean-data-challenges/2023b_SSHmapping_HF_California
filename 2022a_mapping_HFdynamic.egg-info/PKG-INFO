@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: 2022a-mapping-HFdynamic
+Version: 0.0.1
+Summary: Data challenge for high frequency SSH reconstruction on the Californian Xover.
+Home-page: UNKNOWN
+Author: SpaceML-org
+License: UNKNOWN
+Keywords: ocean data challenge SWOT Californian CrossOver
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: tests
+Provides-Extra: docs
+License-File: LICENSE
+
+UNKNOWN
+
