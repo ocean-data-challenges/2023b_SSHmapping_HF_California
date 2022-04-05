@@ -28,12 +28,13 @@ The reference simulation is the MITgcm LLC4320 simulation. The simulation is run
 ### Observations
 The SSH observations are SWOT altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
 
+
 Three mapping experiments can be performed using SWOT: 
 - without observation errors: **SWOT no noise** ('ssh_karin_true_corr' variable), 
 - with KaRIn errors only: **SWOT KaRIn noise** ('ssh_karin_rand_corr' variable),
 - with all observation errors: **SWOT all noise** ('ssh_karin_corr' variable).
 
-see the [`demo_perform_evaluation`](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_evaluation.ipynb) notebook for clarification. 
+As an illustration, see the [`demo_perform_oi`](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb) notebook that performs an OI reconstruction in these three experiments. 
 
 ### Data sequence and use
  
