@@ -30,7 +30,7 @@ def rmse_based_scores(ds_oi, ds_ref):
     return rmse_t, rmse_xy, numpy.round(leaderboard_rmse.values, 2), numpy.round(reconstruction_error_stability_metric, 2)
 
 
-def psd_based_scores(ds_oi, ds_ref):
+def psd_based_scores(ds_oi, ds_ref,dt=numpy.timedelta64(1, 'h')):
     
     logging.info('     Compute PSD-based scores...')
     
@@ -40,12 +40,12 @@ def psd_based_scores(ds_oi, ds_ref):
         err = (ds_oi['ssh'] - ds_ref['ssh'])
         err = err.chunk({"lat":1, 'time': err['time'].size, 'lon': err['lon'].size})
         # make time vector in days units 
-        err['time'] = (err.time - err.time[0]) / numpy.timedelta64(1, 'h')
+        err['time'] = (err.time - err.time[0]) / dt /24.
         
         # Rechunk SSH_true
         signal = ds_ref['ssh'].chunk({"lat":1, 'time': ds_ref['time'].size, 'lon': ds_ref['lon'].size})
         # make time vector in days units
-        signal['time'] = (signal.time - signal.time[0]) / numpy.timedelta64(1, 'h')
+        signal['time'] = (signal.time - signal.time[0]) / dt /24.
     
         # Compute PSD_err and PSD_signal
         psd_err = xrft.power_spectrum(err, dim=['time', 'lon'], detrend='constant', window=True).compute()

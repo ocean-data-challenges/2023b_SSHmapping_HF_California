@@ -90,7 +90,7 @@ def oi_core(it, ds_oi_grid, ds_oi_param, ds_obs):
     Coo = HBHt + R
     Mi = numpy.linalg.inv(Coo)
 
-    sol = numpy.dot(numpy.dot(BHt, Mi), ds_obs.ssh_obs.values[ind1])
+    sol = numpy.dot(numpy.dot(BHt, Mi), ds_obs.dc_ssh_obs.values[ind1])
 
     ds_oi_grid.gssh[it, :, :] = sol.reshape(ds_oi_grid.lat.size, ds_oi_grid.lon.size)
     ds_oi_grid.nobs[it] = nobs
