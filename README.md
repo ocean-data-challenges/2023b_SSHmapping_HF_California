@@ -46,7 +46,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        |
 |:-----------|------------------------:|---------------------:|-------------------------:|-----------------------:|:--------------------------|:-----------------|
-| OI SWOT no noise |                    0.62 |                 0.01 |                      4.4 |                  38.93 | Covariances not optimized | quickstart.ipynb |
+| OI SWOT no noise |                    0.6 |                 0.04 |                      1.13 |                  26.4 | Covariances not optimized | quickstart.ipynb |
 | | | | | | | |
 | OI SWOT KaRIn noise |                    0.64 |                 0.01 |                     4.44 |                  39.06 | Covariances not optimized | quickstart.ipynb |
 | | | | | | | |
