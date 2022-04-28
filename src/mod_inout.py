@@ -2,14 +2,17 @@ import xarray as xr
 import numpy
 import logging
 
-def prep_obs(ds_obs, oi_grid, oi_param, simu_start_date, coarsening):
+def prep_obs(ds_obs, oi_grid, oi_param, simu_start_date, coarsening=None):
     
     logging.info('     Preparing observations...')
     
-    def preprocess(ds):
-        return ds.coarsen(coarsening, boundary="trim").mean()
-     
-    ds_obs = ds_obs.coarsen(coarsening, boundary="trim").mean().sortby('time')
+    if coarsening is not None:
+        def preprocess(ds):
+            return ds.coarsen(coarsening, boundary="trim").mean()
+
+        ds_obs = ds_obs.coarsen(coarsening, boundary="trim").mean().sortby('time')
+        
+    ds_obs = ds_obs.sortby('time')
     
     lon_min = oi_grid.lon.min().values
     lon_max = oi_grid.lon.max().values
