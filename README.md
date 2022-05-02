@@ -6,7 +6,7 @@
   <img src="figures/DC_illust_swot_calXover.png" width="400" /> 
 </p>
 
-This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT data in the Californian SWOT X-over.
+This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT and artificial conventional nadirs data in the Californian SWOT X-over.
 
 The quickstart demo_oi can be run online on Google Colab by clicking here:
 [<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
@@ -20,13 +20,13 @@ You only need to compress your reconstruction maps in a zip file, drop it in you
 
 ## Motivation
 
-The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
+The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite and conventional nadir altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
 
 ### Reference simulation
 The reference simulation is the MITgcm LLC4320 simulation. The simulation is run with tidal forcing. The SSH maps are available hourly. The barotropic tide has been removed from the reference run.  
 
 ### Observations
-The SSH observations are SWOT altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
+The SSH observations are SWOT and conventional nadirs altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
 
 
 Three mapping experiments can be performed using SWOT: 
@@ -65,14 +65,25 @@ You can follow the quickstart guide in [this notebook](https://github.com/SammyM
 The data are hosted on TBD .
  The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/ocean-data-challenges/dc_calXover_data/catalog.html). They are presented with the following directory structure:
 
-- dc_obs/: SWOT data, observations from SWOTsimulator on MITgcm reference;
+- dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;
 
 ```
 .
-|-- dc_obs
+|-- dc_obs_swot
 |   |-- 2022a_SSH_mapping_CalXover_swot.nc
 
 ```
+
+- dc_obs_nadirs/: conventional nadirs data, observations from SWOTsimulator on MITgcm reference;
+
+```
+.
+|-- dc_obs_nadirs/*/
+|   |-- dt_global_XXXXX.nc
+
+```
+where * can be one of the available satellites: alg/, c2/, h2g/, j2g/, j2n/, j3/ and s3a/ ; and XXXXX dates specifications.
+
 
 - dc_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
 
@@ -95,7 +106,11 @@ where ****-**-** stands for year, month and day.
 
 To start out download the *observation* dataset (dc_obs, 77M) from the temporary data server, use:
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs_swot.tar.gz
+```
+and
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs_nadirs.tar.gz
 ```
 
 the *reference* dataset for the evaluation (dc_ref_eval, 660M) using (*this step may take several minutes*):
