@@ -45,7 +45,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 
 ## Leaderboard
 
-<center> **SWOT no noise** </center>
+**SWOT no noise** 
 
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        
 |:-----------|:------------------------:|:---------------------:|:-------------------------:|:-----------------------:|:--------------------------|:-----------------
@@ -53,7 +53,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 | BFN-QG |                    0.9 |                 0.02 |                      1.06 |                  4.12 | Boundary cond. using OI outputs | MASSH package |
 <br/>
 
-<center> **SWOT KaRIn noise** </center>
+**SWOT KaRIn noise** 
 
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        
 |:-----------|:------------------------:|:---------------------:|:-------------------------:|:-----------------------:|:--------------------------|:-----------------
@@ -61,7 +61,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 | BFN-QG |                   0.89 |                 0.02 |                      1.07 |                  4.18 | Boundary cond. using OI outputs | MASSH package |
 <br/>
 
-<center> **SWOT all noise** </center>
+**SWOT all noise** 
 
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        
 |:-----------|:------------------------:|:---------------------:|:-------------------------:|:-----------------------:|:--------------------------|:-----------------
