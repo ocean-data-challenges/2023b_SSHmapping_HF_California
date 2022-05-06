@@ -47,7 +47,7 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        
 |:-----------|------------------------:|---------------------:|-------------------------:|-----------------------:|:--------------------------|:-----------------
-| <td colspan=7>   SWOT no noise
+| <td colspan=6>   SWOT no noise
 | OI SWOT no noise |                    0.85 |                 0.05 |                      1.14 |                  4.38 | Covariances not optimized | demo_perform_oi.ipynb |
 | BFN-QG SWOT no noise |                    0.9 |                 0.02 |                      1.06 |                  4.12 | Boundary cond. using OI outputs | MASSH package |
 | | | | | | | |
