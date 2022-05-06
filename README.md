@@ -48,10 +48,13 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 | Method     |   µ(RMSE) |   σ(RMSE) |   λx (degree) |   λt (days) | Notes                     | Reference        |
 |:-----------|------------------------:|---------------------:|-------------------------:|-----------------------:|:--------------------------|:-----------------|
 | OI SWOT no noise |                    0.85 |                 0.05 |                      1.14 |                  4.38 | Covariances not optimized | demo_perform_oi.ipynb |
+| BFN-QG SWOT no noise |                    0.9 |                 0.02 |                      1.06 |                  4.12 | Boundary cond. using OI outputs | MASSH package |
 | | | | | | | |
 | OI SWOT KaRIn noise |                    0.85 |                 0.05 |                     1.15 |                  4.42 | Covariances not optimized | demo_perform_oi.ipynb |
+| BFN-QG SWOT KaRIn noise |                   0.89 |                 0.02 |                      1.07 |                  4.18 | Boundary cond. using OI outputs | MASSH package |
 | | | | | | | |
 | OI SWOT all noise |                    0.83 |                 0.05 |                     1.86 |                  4.53 | Covariances not optimized | demo_perform_oi.ipynb | 
+| BFN-QG SWOT all noise |                   0.87 |                 0.03 |                      1.87 |                  4.22 | Boundary cond. using OI outputs | MASSH package |
 
 **µ(RMSE)**: average RMSE score.  
 **σ(RMSE)**: standard deviation of the RMSE score.  
