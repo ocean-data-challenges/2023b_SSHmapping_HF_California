@@ -79,7 +79,7 @@ You can follow the quickstart guide in [this notebook](https://github.com/SammyM
 
 ## Download the data
 The data are hosted on TBD .
- The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/ocean-data-challenges/dc_calXover_data/catalog.html). They are presented with the following directory structure:
+ The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/catalog.html). They are presented with the following directory structure:
 
 - dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;
 
@@ -122,23 +122,23 @@ where ****-**-** stands for year, month and day.
 
 To start out download the *observation* dataset (dc_obs, 77M) from the temporary data server, use:
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs_swot.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_obs_swot.tar.gz
 ```
 and
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_obs_nadirs.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_obs_nadirs.tar.gz
 ```
 
 the *reference* dataset for the evaluation (dc_ref_eval, 660M) using (*this step may take several minutes*):
 
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_ref_eval.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_ref_eval.tar.gz
 ```
 
 the *model* dataset for training/validation (dc_ref_eval, 1.5G) using (*this step may take several minutes*):
 
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc_calXover_data/dc_mod.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_mod.tar.gz
 ```
 
 and then uncompress the files using `tar -xvf <file>.tar.gz`. You may also use `ftp`, `rsync` or `curl`to donwload the data.
