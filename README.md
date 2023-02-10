@@ -6,6 +6,9 @@
   <img src="figures/DC_illust_swot_calXover.png" width="400" /> 
 </p>
 
+[![DOI](https://zenodo.org/badge/455492729.svg)](https://zenodo.org/badge/latestdoi/455492729)
+
+
 This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT and artificial conventional nadirs data in the Californian SWOT X-over.
 
 The quickstart demo_oi can be run online on Google Colab by clicking here:
