@@ -1,5 +1,5 @@
  
-# High frequency dynamic mapping Data Challenge 2022a
+# 2023b High frequency SSH mapping data challenge 
 
 <p float="left">
   <img src="figures/DC-illustration_CaliXover.png" width="400" />
