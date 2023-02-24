@@ -1,10 +1,7 @@
  
 # 2023b High frequency SSH mapping data challenge 
 
-<p float="left">
-  <img src="figures/DC-illustration_CaliXover.png" width="400" />
-  <img src="figures/DC_illust_swot_calXover.png" width="400" /> 
-</p>
+<img src="figures/DC_HF_California_mapping-banner.png" /> 
 
 [![DOI](https://zenodo.org/badge/455492729.svg)](https://zenodo.org/badge/latestdoi/455492729)
 
@@ -20,6 +17,10 @@ The quickstart perform_your_eval can be run online on Google Colab by clicking h
 
 You only need to compress your reconstruction maps in a zip file, drop it in your google drive account, create a link to access it and copy paste the link id in the quickstart in place of XXXXX.
 
+<p float="left">
+  <img src="figures/DC-illustration_CaliXover.png" width="400" />
+  <img src="figures/DC_illust_swot_calXover.png" width="400" />
+</p>
 
 ## Motivation
 
