@@ -4,11 +4,11 @@
 
 <br>  
  
- Now that you have cloned the GitHub repo (see [Installation](https://2024c-dc-4dmedsea-esa.readthedocs.io/en/latest/1_getstarted/getstarted_install.html)), you can navigate within the repo. 
+ Now that you have cloned the GitHub repo (see [Installation](getstarted_install.md)), you can navigate within the repo. 
  
  
 <p align="center">
-  <img src="../_static/DC_4DMedSea_GitHub_illustration.png" alt="Alt Text" width="600"/>
+  <img src="../_static/DC_SSH_mapping_cali_GitHub_illustration.jpg" alt="Alt Text" width="600"/>
 </p>
  
 

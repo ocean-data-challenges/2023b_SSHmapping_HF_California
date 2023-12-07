@@ -1,95 +1,79 @@
+
 # Download the data
-
-<br> 
-
-<br>  
-
-The data are hosted and can be accessed on the MEOM server opendap [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024c_DC_4DMedSea-ESA/catalog.html).  
 
 ## Data information
 
-The dataset is presented with the following directory structure:
+The data are available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html). They are presented with the following directory structure:
 
-### 1) Data for experiment: obs/
-
-**Nadir alongtrack data (L3 products) for SSH map reconstruction**
+- dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;
 
 ```
 .
-|-- obs
-|   |-- alg 
-|   |   |-- dt_europe_alg_phy_l3_2017* 
-|   |-- c2 
-|   |   |-- dt_europe_c2_phy_l3_2017* 
-|   |-- j2g 
-|   |   |-- dt_europe_j2g_phy_l3_2017* 
-|   |-- j2n 
-|   |   |-- dt_europe_j2n_phy_l3_2017* 
-|   |-- j3 
-|   |   |-- dt_europe_j3_phy_l3_2017* 
-|   |-- s3a
-|   |   |-- dt_europe_s3a_phy_l3_2017* 
-``` 
+|-- dc_obs_swot
+|   |--    SSH_SWOT_XXXXXX.nc
 
-### 2) Data for evaluation: eval/
+```
+where XXXXX are the dates specifications.
 
-**Independant nadir alongtrack data (L3 products) for SSH evaluation**
+- dc_obs_nadirs/: conventional nadirs data, observations from SWOTsimulator on MITgcm reference;
 
 ```
 .
-|-- eval
-|   |-- indep_nadirs
-|   |   |-- h2ag
-|   |   |   |-- dt_europe_h2ag_phy_l3_2017*		% Haiyang-2A (H2A) Drifting Phase Europe Ocean Along track SSALTO/DUACS Sea Surface Height L3 product 
-```
-
-**Independant drifters for currents evaluation**
+|-- dc_obs_nadirs/*/
+|   |-- SSH_NADIR_XXXXX.nc
 
 ```
-.
-|-- eval
-|   |-- independent_drifters 
-```
+where * can be one of the available satellites: swot/ (which is the swot nadir), alg/, c2/, j3/, s3a/ and s3b/ ; and XXXXX dates specifications.
 
-**Auxiliary data for diagnostics**
+
+- dc_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
 
 ```
-.
-|-- eval
-|   |-- sad
-|   |-- distance_to_nearest_coastline_60.nc
-|   |-- land_water_mask_60.nc
-|   |-- variance_cmems_dt_allsat.nc
+|-- dc_ref_eval
+|   |-- 2023b_SSHmapping_HF_California_eval_****-**-**.nc
 
+where ****-**-** stands for year, month and day. 
 ```
 
-### 3) Data for comparison
+<!--
+- dc_mod: training/validation data, SSH MITgcm outside of the evaluation period.
+  
+```
+|-- dc_mod
+|   |-- 2022a_SSH_mapping_CalXover_model_****-**-**.nc
 
-**Reconstruction maps for comparison**
+where ****-**-** stands for year, month and day. 
 
 ```
-.
-|-- maps
-|   |-- DUACS			% DUACS reconstruction with all sat (including evaluation)			
-|   |-- MIOST		% MIOST reconstruction 
-```
-
+-->
 
 ## Download and read the data
 
-The data can be downloaded locally using the wget command. We recommand that the data be stored in the `data/` repository. 
-For example, to download and unzip the experiment `obs/` data:
 
-
+To start out download the *observation* dataset (dc_obs) from the temporary data server, use:
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_swot.tar.gz
 ```
-cd data/ 
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024c_DC_4DMedSea-ESA/obs.tar.gz 
-tar -xvf obs.tar.gz  
-rm -f obs.tar.gz
+and
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_nadirs.tar.gz
 ```
 
-**Example notebook**
+the *reference* dataset for the evaluation (dc_ref_eval) using (*this step may take several minutes*):
 
-A notebook to illustrate how to download and read the global data is available 
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_ref_eval.tar.gz
+```
+<!--
+the *model* dataset for training/validation (dc_ref_eval) using (*this step may take several minutes*):
+
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_mod.tar.gz
+```
+-->
+
+and then uncompress the files using `tar -xvf <file>.tar.gz`. You may also use `ftp`, `rsync` or `curl`to donwload the data.
+
+
  
 

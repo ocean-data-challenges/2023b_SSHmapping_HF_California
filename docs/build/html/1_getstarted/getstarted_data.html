@@ -51,12 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="getstarted_install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getstarted_navigate.html">Navigate the GitHub</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Download the data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-information">Data information</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#data-for-experiment-obs">1) Data for experiment: obs/</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#data-for-evaluation-eval">2) Data for evaluation: eval/</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#data-for-comparison">3) Data for comparison</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-information">Data information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download-and-read-the-data">Download and read the data</a></li>
 </ul>
 </li>
@@ -108,82 +103,72 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="download-the-data">
 <h1>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline"></a></h1>
-<br> 
-<br>  
-<p>The data are hosted and can be accessed on the MEOM server opendap <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024c_DC_4DMedSea-ESA/catalog.html">here</a>.</p>
 <section id="data-information">
 <h2>Data information<a class="headerlink" href="#data-information" title="Permalink to this headline"></a></h2>
-<p>The dataset is presented with the following directory structure:</p>
-<section id="data-for-experiment-obs">
-<h3>1) Data for experiment: obs/<a class="headerlink" href="#data-for-experiment-obs" title="Permalink to this headline"></a></h3>
-<p><strong>Nadir alongtrack data (L3 products) for SSH map reconstruction</strong></p>
+<p>The data are available <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html">here</a>. They are presented with the following directory structure:</p>
+<ul class="simple">
+<li><p>dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>
-<span class="o">|--</span> <span class="n">obs</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">alg</span> 
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_alg_phy_l3_2017</span><span class="o">*</span> 
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">c2</span> 
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_c2_phy_l3_2017</span><span class="o">*</span> 
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">j2g</span> 
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_j2g_phy_l3_2017</span><span class="o">*</span> 
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">j2n</span> 
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_j2n_phy_l3_2017</span><span class="o">*</span> 
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">j3</span> 
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_j3_phy_l3_2017</span><span class="o">*</span> 
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">s3a</span>
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_s3a_phy_l3_2017</span><span class="o">*</span> 
-</pre></div>
-</div>
-</section>
-<section id="data-for-evaluation-eval">
-<h3>2) Data for evaluation: eval/<a class="headerlink" href="#data-for-evaluation-eval" title="Permalink to this headline"></a></h3>
-<p><strong>Independant nadir alongtrack data (L3 products) for SSH evaluation</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>
-<span class="o">|--</span> <span class="nb">eval</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">indep_nadirs</span>
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">h2ag</span>
-<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="n">dt_europe_h2ag_phy_l3_2017</span><span class="o">*</span>		<span class="o">%</span> <span class="n">Haiyang</span><span class="o">-</span><span class="mi">2</span><span class="n">A</span> <span class="p">(</span><span class="n">H2A</span><span class="p">)</span> <span class="n">Drifting</span> <span class="n">Phase</span> <span class="n">Europe</span> <span class="n">Ocean</span> <span class="n">Along</span> <span class="n">track</span> <span class="n">SSALTO</span><span class="o">/</span><span class="n">DUACS</span> <span class="n">Sea</span> <span class="n">Surface</span> <span class="n">Height</span> <span class="n">L3</span> <span class="n">product</span> 
-</pre></div>
-</div>
-<p><strong>Independant drifters for currents evaluation</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>
-<span class="o">|--</span> <span class="nb">eval</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">independent_drifters</span> 
-</pre></div>
-</div>
-<p><strong>Auxiliary data for diagnostics</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>
-<span class="o">|--</span> <span class="nb">eval</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">sad</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">distance_to_nearest_coastline_60</span><span class="o">.</span><span class="n">nc</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">land_water_mask_60</span><span class="o">.</span><span class="n">nc</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">variance_cmems_dt_allsat</span><span class="o">.</span><span class="n">nc</span>
+<span class="o">|--</span> <span class="n">dc_obs_swot</span>
+<span class="o">|</span>   <span class="o">|--</span>    <span class="n">SSH_SWOT_XXXXXX</span><span class="o">.</span><span class="n">nc</span>
 
 </pre></div>
 </div>
-</section>
-<section id="data-for-comparison">
-<h3>3) Data for comparison<a class="headerlink" href="#data-for-comparison" title="Permalink to this headline"></a></h3>
-<p><strong>Reconstruction maps for comparison</strong></p>
+<p>where XXXXX are the dates specifications.</p>
+<ul class="simple">
+<li><p>dc_obs_nadirs/: conventional nadirs data, observations from SWOTsimulator on MITgcm reference;</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>
-<span class="o">|--</span> <span class="n">maps</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">DUACS</span>			<span class="o">%</span> <span class="n">DUACS</span> <span class="n">reconstruction</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">sat</span> <span class="p">(</span><span class="n">including</span> <span class="n">evaluation</span><span class="p">)</span>			
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">MIOST</span>		<span class="o">%</span> <span class="n">MIOST</span> <span class="n">reconstruction</span> 
+<span class="o">|--</span> <span class="n">dc_obs_nadirs</span><span class="o">/*/</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">SSH_NADIR_XXXXX</span><span class="o">.</span><span class="n">nc</span>
+
 </pre></div>
 </div>
-</section>
+<p>where * can be one of the available satellites: swot/ (which is the swot nadir), alg/, c2/, j3/, s3a/ and s3b/ ; and XXXXX dates specifications.</p>
+<ul class="simple">
+<li><p>dc_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|--</span> <span class="n">dc_ref_eval</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="mi">2023</span><span class="n">b_SSHmapping_HF_California_eval_</span><span class="o">****-**-**.</span><span class="n">nc</span>
+
+<span class="n">where</span> <span class="o">****-**-**</span> <span class="n">stands</span> <span class="k">for</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span> <span class="ow">and</span> <span class="n">day</span><span class="o">.</span> 
+</pre></div>
+</div>
+<!--
+- dc_mod: training/validation data, SSH MITgcm outside of the evaluation period.
+  
+```
+|-- dc_mod
+|   |-- 2022a_SSH_mapping_CalXover_model_****-**-**.nc
+
+where ****-**-** stands for year, month and day. 
+
+```
+-->
 </section>
 <section id="download-and-read-the-data">
 <h2>Download and read the data<a class="headerlink" href="#download-and-read-the-data" title="Permalink to this headline"></a></h2>
-<p>The data can be downloaded locally using the wget command. We recommand that the data be stored in the <code class="docutils literal notranslate"><span class="pre">data/</span></code> repository.
-For example, to download and unzip the experiment <code class="docutils literal notranslate"><span class="pre">obs/</span></code> data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">data</span><span class="o">/</span> 
-<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ige</span><span class="o">-</span><span class="n">meom</span><span class="o">-</span><span class="n">opendap</span><span class="o">.</span><span class="n">univ</span><span class="o">-</span><span class="n">grenoble</span><span class="o">-</span><span class="n">alpes</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">thredds</span><span class="o">/</span><span class="n">fileServer</span><span class="o">/</span><span class="n">meomopendap</span><span class="o">/</span><span class="n">extract</span><span class="o">/</span><span class="n">MEOM</span><span class="o">/</span><span class="n">OCEAN_DATA_CHALLENGES</span><span class="o">/</span><span class="mi">2024</span><span class="n">c_DC_4DMedSea</span><span class="o">-</span><span class="n">ESA</span><span class="o">/</span><span class="n">obs</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> 
-<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">obs</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>  
-<span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">obs</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<p>To start out download the <em>observation</em> dataset (dc_obs) from the temporary data server, use:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_swot.tar.gz
 </pre></div>
 </div>
-<p><strong>Example notebook</strong></p>
-<p>A notebook to illustrate how to download and read the global data is available</p>
+<p>and</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_nadirs.tar.gz
+</pre></div>
+</div>
+<p>the <em>reference</em> dataset for the evaluation (dc_ref_eval) using (<em>this step may take several minutes</em>):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_ref_eval.tar.gz
+</pre></div>
+</div>
+<!--
+the *model* dataset for training/validation (dc_ref_eval) using (*this step may take several minutes*):
+
+```shell
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_mod.tar.gz
+```
+-->
+<p>and then uncompress the files using <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">&lt;file&gt;.tar.gz</span></code>. You may also use <code class="docutils literal notranslate"><span class="pre">ftp</span></code>, <code class="docutils literal notranslate"><span class="pre">rsync</span></code> or <code class="docutils literal notranslate"><span class="pre">curl</span></code>to donwload the data.</p>
 </section>
 </section>
 
