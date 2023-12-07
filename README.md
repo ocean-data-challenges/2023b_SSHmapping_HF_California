@@ -1,5 +1,4 @@
-[<img src="figures/DC_checkout_webpage.jpg">](https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html)
-
+# Check out the data challenge [website](https://2023b-sshmapping-hf-california.readthedocs.io) for more infos !
 
 <br>
 
