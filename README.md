@@ -9,9 +9,9 @@
 
 <br>
 
-<p style="text-align:center">    
-<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html">Check out the data challenge website for a better overview</a> 
-</p>
+![figures/DC_checkout_webpage.jpg](https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html)
+
+
 
 <br>
 
@@ -86,9 +86,9 @@ The metrics used to evaluate the mapping and separation are:
 **λt**: minimum time scale resolved. 
   
 
-## The data
+## Download the data
 
-### Data structure
+### Data information
 
  The data are available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html). They are presented with the following directory structure:
 
@@ -134,7 +134,7 @@ where ****-**-** stands for year, month and day.
 ```
 -->
 
-### Download the data
+### Download and read the data
 
 
 To start out download the *observation* dataset (dc_obs) from the temporary data server, use:
