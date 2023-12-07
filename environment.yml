@@ -1,4 +1,4 @@
-name: odc-ssh-mapping
+name: env_dc_ssh_mapping_cali
 channels:
   - menpo
   - conda-forge
