@@ -75,9 +75,11 @@ The metrics used to evaluate the mapping and separation are:
 **λt**: minimum time scale resolved. 
   
 
-## Download the data
-The data are hosted on TBD .
- The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html). They are presented with the following directory structure:
+## The data
+
+### Data structure
+
+ The data are available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html). They are presented with the following directory structure:
 
 - dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;
 
@@ -109,6 +111,7 @@ where * can be one of the available satellites: swot/ (which is the swot nadir),
 where ****-**-** stands for year, month and day. 
 ```
 
+<!--
 - dc_mod: training/validation data, SSH MITgcm outside of the evaluation period.
 
 ```
@@ -118,6 +121,10 @@ where ****-**-** stands for year, month and day.
 where ****-**-** stands for year, month and day. 
 
 ```
+-->
+
+### Download the data
+
 
 To start out download the *observation* dataset (dc_obs) from the temporary data server, use:
 ```shell
