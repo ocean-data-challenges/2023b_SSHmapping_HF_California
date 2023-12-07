@@ -91,3 +91,10 @@ The metrics used to evaluate the mapping and separation are:
    :caption: Scripts
 
    6_scripts/modules.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Metrics details
+
+   5_metrics_det/metrics_balancedmotion.md
