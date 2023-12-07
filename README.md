@@ -113,7 +113,7 @@ where ****-**-** stands for year, month and day.
 
 <!--
 - dc_mod: training/validation data, SSH MITgcm outside of the evaluation period.
-
+ 
 ```
 |-- dc_mod
 |   |-- 2022a_SSH_mapping_CalXover_model_****-**-**.nc
