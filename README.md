@@ -7,15 +7,7 @@
 
 
 This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT and artificial conventional nadirs data in the Californian SWOT X-over.
-
-The quickstart demo_oi can be run online on Google Colab by clicking here:
-[<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing)
-
-
-The quickstart perform_your_eval can be run online on Google Colab by clicking here:
-[<img src="figures/logo_colab.png" width="75">](https://colab.research.google.com/drive/1dHei0-NYoER6Ma0MOFEO1I3VYYhnJtbD?usp=sharing). 
-
-You only need to compress your reconstruction maps in a zip file, drop it in your google drive account, create a link to access it and copy paste the link id in the quickstart in place of XXXXX.
+ 
 
 <p float="left">
   <img src="figures/DC-illustration_CaliXover.png" width="400" />
