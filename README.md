@@ -9,9 +9,8 @@
 
 <br>
 
-<center> 
-    <a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html"><font size="5"> Check out the data challenge website for a better overview</font></a>
-</center>
+<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html"><center><font size="10"> Check out the data challenge website for a better overview</font></center></a>
+
 
 <br>
 
