@@ -9,7 +9,7 @@
 
 <br>
 
-![figures/DC_checkout_webpage.jpg](https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html)
+[![][figures/DC_checkout_webpage.jpg][https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html]
 
 
 
