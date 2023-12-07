@@ -5,9 +5,17 @@
 
 [![DOI](https://zenodo.org/badge/455492729.svg)](https://zenodo.org/badge/latestdoi/455492729)
 
+<br>
+
+<br>
+
 <center> 
     <a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html"><font size="5"> Check out the data challenge website for a better overview</font></a>
 </center>
+
+<br>
+
+<br>
 
 This repository contains codes and sample notebooks of a data challenge for downloading and processing the high frequency SSH mapping with artificial SWOT and artificial conventional nadirs data in the Californian SWOT X-over.
  
