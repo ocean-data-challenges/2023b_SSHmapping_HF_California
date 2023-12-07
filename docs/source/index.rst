@@ -84,13 +84,18 @@ The metrics used to evaluate the mapping and separation are:
    1_getstarted/getstarted_navigate.md
    1_getstarted/getstarted_data.md 
    1_getstarted/getstarted_eval.md
- 
+   
 .. toctree::
    :hidden:
-   :maxdepth: 1
-   :caption: Scripts
+   :maxdepth: 2
+   :caption: Evaluation
 
-   6_scripts/modules.rst
+   2_eval_generic/eval_overall.md
+   2_eval_generic/eval_OI.md
+   2_eval_generic/eval_BFNQG.md
+   2_eval_generic/eval_4DVarQG.md
+
+   
 
 .. toctree::
    :hidden:
@@ -98,3 +103,10 @@ The metrics used to evaluate the mapping and separation are:
    :caption: Metrics details
 
    5_metrics_det/metrics_balancedmotion.md
+ 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Scripts
+
+   6_scripts/modules.rst

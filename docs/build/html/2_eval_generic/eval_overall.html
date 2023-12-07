@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overall evaluation &mdash; 2024c_DC_4DMedSea-ESA  documentation</title>
+  <title>Overall evaluation &mdash; 2023b_SSHmapping_HF_California  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="DUACS" href="eval_DUACS.html" />
+    <link rel="next" title="Optimal Interpolation" href="eval_OI.html" />
     <link rel="prev" title="Evaluate your own maps" href="../1_getstarted/getstarted_eval.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -35,8 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            2024c_DC_4DMedSea-ESA
-              <img src="../_static/DC_4DMedSea_MapBanner.png" class="logo" alt="Logo"/>
+            2023b_SSHmapping_HF_California
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -49,41 +48,32 @@
               <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_navigate.html">Navigate the GitHub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Generic evaluation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Evaluation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Overall evaluation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#quantitative-overview">Quantitative overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#movies">Movies</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eval_DUACS.html">DUACS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eval_MIOST.html">MIOST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eval_4DVarNet.html">4DVarNet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_OI.html">Optimal Interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eval_BFNQG.html">BFN-QG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_4DVarQG.html">4DVarQG</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_alongtrack.html">SSH - Along track metrics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_alongdrifter.html">Currents - Along drifter metrics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_driftertraj.html">Currents - Lagrangian metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_balancedmotion.html">SSH - Balanced motion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_compare.html">mod_compare module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_filter.html">mod_filter module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_eval.html">mod_eval module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_inout.html">mod_inout module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_oi.html">mod_oi module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_powerspec.html">mod_powerspec module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_read.html">mod_read module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_stat.html">mod_stat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_switchvar.html">mod_switchvar module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_traj.html">mod_traj module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_utils.html">mod_utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_xscale.html">mod_xscale module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_regrid.html">mod_regrid module</a></li>
 </ul>
 
         </div>
@@ -92,7 +82,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">2024c_DC_4DMedSea-ESA</a>
+          <a href="../index.html">2023b_SSHmapping_HF_California</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -129,7 +119,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../1_getstarted/getstarted_eval.html" class="btn btn-neutral float-left" title="Evaluate your own maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="eval_DUACS.html" class="btn btn-neutral float-right" title="DUACS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="eval_OI.html" class="btn btn-neutral float-right" title="Optimal Interpolation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
