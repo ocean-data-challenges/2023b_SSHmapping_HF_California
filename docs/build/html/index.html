@@ -118,12 +118,14 @@
 - with KaRIn errors only: <strong>SWOT KaRIn noise</strong> (‘ssh_karin’ variable),
 - with all observation errors: <strong>SWOT all noise</strong> (‘ssh_obs’ variable).</p>
 <a class="reference internal image-reference" href="_images/DC_illust_swot_calXover.png"><img alt="_images/DC_illust_swot_calXover.png" class="align-center" src="_images/DC_illust_swot_calXover.png" style="width: 500px;" /></a>
-<p>As an illustration, see the [<cite>demo_perform_oi</cite>](<a class="reference external" href="https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb">https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb</a>) notebook that performs an OI reconstruction in these three experiments.</p>
+<p>As an illustration, see the <a class="reference external" href="https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb">demo_perform_oi</a> notebook that performs an OI reconstruction in these three experiments.</p>
 </section>
 <section id="data-sequence-and-use">
 <h3>Data sequence and use<a class="headerlink" href="#data-sequence-and-use" title="Permalink to this headline"></a></h3>
-<p>The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-30: 89 days.
-For reconstruction methods that need a spin-up, the <strong>observations</strong> can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the <strong>reference data</strong> and the <strong>observations</strong> can be used from 2012-06-01 to 2012-10-29. The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.</p>
+<p>The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-30: 89 days.</p>
+<p>For reconstruction methods that need a spin-up, the <strong>observations</strong> can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the <strong>reference data</strong> and the <strong>observations</strong> can be used from 2012-06-01 to 2012-10-29.</p>
+<p><strong>The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.</strong></p>
+<p>The data are available on the <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html">opendap</a>. For more information, you can check the <a class="reference external" href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/1_getstarted/getstarted_data.html">Download the data</a>. section.</p>
 <a class="reference internal image-reference" href="_images/DC-data_availability.png"><img alt="_images/DC-data_availability.png" src="_images/DC-data_availability.png" style="width: 1200px;" /></a>
 </section>
 <section id="evaluation">

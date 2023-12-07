@@ -51,13 +51,18 @@ Three mapping experiments can be performed using SWOT:
     :width: 500  
     :align: center
 
-As an illustration, see the [`demo_perform_oi`](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb) notebook that performs an OI reconstruction in these three experiments. 
+As an illustration, see the `demo_perform_oi <https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/notebooks/demo_perform_oi.ipynb>`_ notebook that performs an OI reconstruction in these three experiments. 
  
 Data sequence and use
 ---------------------
  
 The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-30: 89 days.
-For reconstruction methods that need a spin-up, the **observations** can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the **reference data** and the **observations** can be used from 2012-06-01 to 2012-10-29. The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.
+
+For reconstruction methods that need a spin-up, the **observations** can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the **reference data** and the **observations** can be used from 2012-06-01 to 2012-10-29. 
+
+**The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.**
+
+The data are available on the `opendap <https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html>`_. For more information, you can check the `Download the data <https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/1_getstarted/getstarted_data.html>`_. section. 
 
 .. image:: _static/DC-data_availability.png
     :width: 1200
