@@ -8,8 +8,10 @@
 <br>
 
 <br>
-
-<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html"><center><font size="10"> Check out the data challenge website for a better overview</font></center></a>
+<center><font size="10"> 
+<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html">Check out the data challenge website for a better overview</a>
+    
+</font></center>
 
 
 <br>
