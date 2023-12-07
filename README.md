@@ -9,7 +9,7 @@
 
 <br>
 <center><font size="10"> 
-<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html">Check out the data challenge website for a better overview</a>
+<a href="https://2023b-sshmapping-hf-california.readthedocs.io/en/latest/index.html" style="font-size: 100px; text-decoration: none">Check out the data challenge website for a better overview</a>
     
 </font></center>
 
