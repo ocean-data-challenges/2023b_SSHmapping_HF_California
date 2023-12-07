@@ -16,10 +16,10 @@ This repository contains codes and sample notebooks of a data challenge for down
 
 ## Motivation
 
-The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps in the Californian SWOT cross-over from artificial SWOT satellite and conventional nadir altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
+The goal is to investigate how to best reconstruct sequences of Sea Surface Height (SSH) maps and separate the balanced motions and the internal waves in the Californian SWOT cross-over from artificial SWOT satellite and conventional nadir altimetry observations. This data challenge follows an _Observation System Simulation Experiment_ framework: "reference" full SSH are from a numerical simulation with a realistic, high-resolution ocean circulation model: the reference simulation. Satellite observations are simulated by sampling the reference simulation based on realistic orbits of past, existing or future altimetry satellites. A baseline reconstruction method is provided (see below) and the practical goal of the challenge is to beat this baseline according to scores also described below and in Jupyter notebooks.
 
 ### Reference simulation
-The reference simulation is the MITgcm LLC4320 simulation. The simulation is run with tidal forcing. The SSH maps are available hourly. The barotropic tide has been removed from the reference run.  
+The reference simulation is the MITgcm LLC4320 simulation. The simulation is run with tidal forcing. The SSH maps are available hourly. The barotropic tide and the dac have been removed from the reference run. Also, the balanced motions and the internal waves have been seperated using spatio-temporal filters
 
 ### Observations
 The SSH observations are SWOT and conventional nadirs altimeter data simulated on the reference run. Hence, the barotropic tide is also not present in the SWOT observations. 
@@ -38,6 +38,10 @@ The SSH reconstructions are assessed over the period from 2012-02-01 to 2012-04-
 For reconstruction methods that need a spin-up, the **observations** can be used from 2012-01-04 until the beginning of the evaluation period. This spin-up period is not included in the evaluation. For reconstruction methods that need learning from full fields, the **reference data** and the **observations** can be used from 2012-06-01 to 2012-10-29. The reference data between 2012-05-01 and 2012-05-31 should never be used so that any learning period or other method-related-training period can be considered uncorrelated to the evaluation period.
 
 ![Data Sequence](figures/DC-data_availability.png)
+
+### Evalutation
+
+The metrics used to evaluate the mapping and separation are: 
 
 ## Leaderboard
 
@@ -69,39 +73,38 @@ For reconstruction methods that need a spin-up, the **observations** can be used
 **σ(RMSE)**: standard deviation of the RMSE score.  
 **λx**: minimum spatial scale resolved.  
 **λt**: minimum time scale resolved. 
- 
-## Quick start
-You can follow the quickstart guide in [this notebook](https://github.com/SammyMetref/2022a_mapping_HFdynamic/blob/master/quickstart_demo_oi.ipynb) or launch it directly from <a href="https://colab.research.google.com/drive/1ddJqtmcLAVf4QqFNx34MwLVK0fEJfJV6?usp=sharing" target="_blank">CoLab</a>.
+  
 
 ## Download the data
 The data are hosted on TBD .
- The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/catalog.html). They are presented with the following directory structure:
+ The data are also temporarily available [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/catalog.html). They are presented with the following directory structure:
 
 - dc_obs_swot/: SWOT data, observations from SWOTsimulator on MITgcm reference;
 
 ```
 .
 |-- dc_obs_swot
-|   |-- 2022a_SSH_mapping_CalXover_swot.nc
+|   |--    SSH_SWOT_XXXXXX.nc
 
 ```
+where XXXXX are the dates specifications.
 
 - dc_obs_nadirs/: conventional nadirs data, observations from SWOTsimulator on MITgcm reference;
 
 ```
 .
 |-- dc_obs_nadirs/*/
-|   |-- dt_global_XXXXX.nc
+|   |-- SSH_NADIR_XXXXX.nc
 
 ```
-where * can be one of the available satellites: alg/, c2/, h2g/, j2g/, j2n/, j3/ and s3a/ ; and XXXXX dates specifications.
+where * can be one of the available satellites: swot/ (which is the swot nadir), alg/, c2/, j3/, s3a/ and s3b/ ; and XXXXX dates specifications.
 
 
 - dc_ref_eval: evaluation data, SSH reference from MITgcm during the evaluation period;
 
 ```
 |-- dc_ref_eval
-|   |-- 2022a_SSH_mapping_CalXover_eval_****-**-**.nc
+|   |-- 2023b_SSHmapping_HF_California_eval_****-**-**.nc
 
 where ****-**-** stands for year, month and day. 
 ```
@@ -116,26 +119,27 @@ where ****-**-** stands for year, month and day.
 
 ```
 
-To start out download the *observation* dataset (dc_obs, 77M) from the temporary data server, use:
+To start out download the *observation* dataset (dc_obs) from the temporary data server, use:
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_obs_swot.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_swot.tar.gz
 ```
 and
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_obs_nadirs.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_obs_nadirs.tar.gz
 ```
 
-the *reference* dataset for the evaluation (dc_ref_eval, 660M) using (*this step may take several minutes*):
+the *reference* dataset for the evaluation (dc_ref_eval) using (*this step may take several minutes*):
 
 ```shell
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_ref_eval.tar.gz
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023b_SSHmapping_HF_California/dc_ref_eval.tar.gz
 ```
-
-the *model* dataset for training/validation (dc_ref_eval, 1.5G) using (*this step may take several minutes*):
+<!--
+the *model* dataset for training/validation (dc_ref_eval) using (*this step may take several minutes*):
 
 ```shell
 wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/ocean-data-challenges/dc/dc_calXover/dc_mod.tar.gz
 ```
+-->
 
 and then uncompress the files using `tar -xvf <file>.tar.gz`. You may also use `ftp`, `rsync` or `curl`to donwload the data.
 

@@ -1,0 +1,47 @@
+src.mod\_eval module
+--------------------
+
+.. automodule:: src.mod_eval
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.mod\_inout module
+---------------------
+
+.. automodule:: src.mod_inout
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.mod\_oi module
+------------------
+
+.. automodule:: src.mod_oi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.mod\_plot module
+--------------------
+
+.. automodule:: src.mod_plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+src.mod\_regrid module
+----------------------
+
+.. automodule:: src.mod_regrid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: src
+   :members:
+   :undoc-members:
+   :show-inheritance:
